@@ -7,6 +7,7 @@ Personal Doom Emacs configuration maintained in `~/.config/doom`.
 - Catppuccin Latte theme and absolute line numbers.
 - Evil editing, Corfu completion with Orderless, and Vertico selection.
 - Workspaces, snippets, folding, syntax checking, and Magit.
+- Ghostel terminal emulator, powered by libghostty-vt.
 - Language modules for Emacs Lisp, JavaScript with Tree-sitter, JSON, Markdown, Org, Python, shell, web, and YAML.
 - macOS integration enabled conditionally on macOS.
 - Org files configured to live in `~/org/`.
@@ -39,6 +40,13 @@ If `doom` is not on your `PATH`, invoke it from your Doom installation's `bin/` 
 After editing `init.el` or `packages.el`, run `doom sync` and restart Emacs. Changes confined to `config.el` do not require synchronization; restart Emacs to verify them.
 
 For example, set `display-line-numbers-type` to `'relative` in `config.el` to use relative line numbers. Adjust `org-directory` there to change where Org files are kept. Defer package-specific settings with `with-eval-after-load` when appropriate.
+
+## Terminal
+
+Run `M-x ghostel` to open a terminal. On first launch, accept the prompt to download
+the native module for your platform. Supported macOS systems have prebuilt
+binaries, so compiling with Zig is optional. Restart Emacs after enabling the
+module and running `doom sync`.
 
 ## Validation
 
