@@ -50,6 +50,10 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(with-eval-after-load 'ghostel
+  (when (eq system-type 'windows-nt)
+    (setq ghostel-shell "pwsh.exe")))
+
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `with-eval-after-load' block, otherwise Doom's defaults may override your

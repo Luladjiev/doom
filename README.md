@@ -43,6 +43,8 @@ For example, set `display-line-numbers-type` to `'relative` in `config.el` to us
 
 ## Terminal
 
+On Windows, Ghostel uses `pwsh.exe`; PowerShell 7 must be available on `PATH`.
+
 Run `M-x ghostel` to open a terminal. On first launch, accept the prompt to download
 the native module for your platform. Supported macOS systems have prebuilt
 binaries, so compiling with Zig is optional. Restart Emacs after enabling the
